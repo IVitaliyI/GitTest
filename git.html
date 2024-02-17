@@ -1,0 +1,93 @@
+<pre><span style="color:#26A269"><b>vitaliy@vitaliy-Nitro-AN515-54</b></span>:<span style="color:#12488B"><b>~</b></span>$ mkdir GitTest
+<span style="color:#26A269"><b>vitaliy@vitaliy-Nitro-AN515-54</b></span>:<span style="color:#12488B"><b>~</b></span>$ cd GitTest/
+<span style="color:#26A269"><b>vitaliy@vitaliy-Nitro-AN515-54</b></span>:<span style="color:#12488B"><b>~/GitTest</b></span>$ git init
+<span style="color:#A2734C">подсказка: Using &apos;master&apos; as the name for the initial branch. This default branch name</span>
+<span style="color:#A2734C">подсказка: is subject to change. To configure the initial branch name to use in all</span>
+<span style="color:#A2734C">подсказка: of your new repositories, which will suppress this warning, call:</span>
+<span style="color:#A2734C">подсказка: </span>
+<span style="color:#A2734C">подсказка: </span>	<span style="color:#A2734C">git config --global init.defaultBranch &lt;name&gt;</span>
+<span style="color:#A2734C">подсказка: </span>
+<span style="color:#A2734C">подсказка: Names commonly chosen instead of &apos;master&apos; are &apos;main&apos;, &apos;trunk&apos; and</span>
+<span style="color:#A2734C">подсказка: &apos;development&apos;. The just-created branch can be renamed via this command:</span>
+<span style="color:#A2734C">подсказка: </span>
+<span style="color:#A2734C">подсказка: </span>	<span style="color:#A2734C">git branch -m &lt;name&gt;</span>
+Инициализирован пустой репозиторий Git в /home/vitaliy/GitTest/.git/
+<span style="color:#26A269"><b>vitaliy@vitaliy-Nitro-AN515-54</b></span>:<span style="color:#12488B"><b>~/GitTest</b></span>$ git remote add git@github.com:IVitaliyI/GitTest.git
+использование: git remote add [&lt;опции&gt;] &lt;имя&gt; &lt;url&gt;
+
+    -f, --fetch           извлечь внешние ветки
+    --tags                импортировать все метки и ассоциированные объекты при извлечении
+                          или не извлекать метки вообще (--no-tags)
+    -t, --track &lt;ветка&gt;   отслеживаемые ветки
+    -m, --master &lt;ветка&gt;  мастер ветка
+    --mirror[=(push|fetch)]
+                          настроить внешний репозиторий как зеркало для отправки или извлечения изменений
+
+<span style="color:#26A269"><b>vitaliy@vitaliy-Nitro-AN515-54</b></span>:<span style="color:#12488B"><b>~/GitTest</b></span>$ git remote add master git@github.com:IVitaliyI/GitTest.git
+<span style="color:#26A269"><b>vitaliy@vitaliy-Nitro-AN515-54</b></span>:<span style="color:#12488B"><b>~/GitTest</b></span>$ git pull master
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Распаковка объектов: 100% (3/3), 868 байтов | 868.00 КиБ/с, готово.
+Из github.com:IVitaliyI/GitTest
+ * [новая ветка]     master     -&gt; master/master
+Вы попросили получить изменения со внешнего репозитория «master», но не указали ветку. Так как это не репозиторий по умолчанию для  вашей текущей ветки, вы должны указать ветку в командной строке.
+<span style="color:#26A269"><b>vitaliy@vitaliy-Nitro-AN515-54</b></span>:<span style="color:#12488B"><b>~/GitTest</b></span>$ git branch master
+fatal: not a valid object name: &apos;master&apos;
+<span style="color:#26A269"><b>vitaliy@vitaliy-Nitro-AN515-54</b></span>:<span style="color:#12488B"><b>~/GitTest</b></span>$ git checkout master
+branch &apos;master&apos; set up to track &apos;master/master&apos;.
+Уже на «master»
+<span style="color:#26A269"><b>vitaliy@vitaliy-Nitro-AN515-54</b></span>:<span style="color:#12488B"><b>~/GitTest</b></span>$ git checkout -b dev
+Переключено на новую ветку «dev»
+<span style="color:#26A269"><b>vitaliy@vitaliy-Nitro-AN515-54</b></span>:<span style="color:#12488B"><b>~/GitTest</b></span>$ touch system.slx
+<span style="color:#26A269"><b>vitaliy@vitaliy-Nitro-AN515-54</b></span>:<span style="color:#12488B"><b>~/GitTest</b></span>$ git commit -m &quot;feat : create system DPT&quot;
+На ветке dev
+Неотслеживаемые файлы:
+  (используйте «git add &lt;файл&gt;…», чтобы добавить в то, что будет включено в коммит)
+	<span style="color:#C01C28">system.slx</span>
+
+ничего не добавлено в коммит, но есть неотслеживаемые файлы (используйте «git add», чтобы отслеживать их)
+<span style="color:#26A269"><b>vitaliy@vitaliy-Nitro-AN515-54</b></span>:<span style="color:#12488B"><b>~/GitTest</b></span>$ git add system.slx
+<span style="color:#26A269"><b>vitaliy@vitaliy-Nitro-AN515-54</b></span>:<span style="color:#12488B"><b>~/GitTest</b></span>$ git commit -m &quot;feat : create system DPT&quot;
+[dev d1d9ec6] feat : create system DPT
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 system.slx
+<span style="color:#26A269"><b>vitaliy@vitaliy-Nitro-AN515-54</b></span>:<span style="color:#12488B"><b>~/GitTest</b></span>$ git checkout -b feature_viscous_friction
+Переключено на новую ветку «feature_viscous_friction»
+<span style="color:#26A269"><b>vitaliy@vitaliy-Nitro-AN515-54</b></span>:<span style="color:#12488B"><b>~/GitTest</b></span>$ touch viscous.slx
+<span style="color:#26A269"><b>vitaliy@vitaliy-Nitro-AN515-54</b></span>:<span style="color:#12488B"><b>~/GitTest</b></span>$ git commit -m &quot;feat : viscous DPT&quot;
+На ветке feature_viscous_friction
+Неотслеживаемые файлы:
+  (используйте «git add &lt;файл&gt;…», чтобы добавить в то, что будет включено в коммит)
+	<span style="color:#C01C28">viscous.slx</span>
+
+ничего не добавлено в коммит, но есть неотслеживаемые файлы (используйте «git add», чтобы отслеживать их)
+<span style="color:#26A269"><b>vitaliy@vitaliy-Nitro-AN515-54</b></span>:<span style="color:#12488B"><b>~/GitTest</b></span>$ git add viscous.slx 
+<span style="color:#26A269"><b>vitaliy@vitaliy-Nitro-AN515-54</b></span>:<span style="color:#12488B"><b>~/GitTest</b></span>$ git commit -m &quot;feat : viscous DPT&quot;
+[feature_viscous_friction 1b87827] feat : viscous DPT
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 viscous.slx
+<span style="color:#26A269"><b>vitaliy@vitaliy-Nitro-AN515-54</b></span>:<span style="color:#12488B"><b>~/GitTest</b></span>$ git checkout dev
+Переключено на ветку «dev»
+<span style="color:#26A269"><b>vitaliy@vitaliy-Nitro-AN515-54</b></span>:<span style="color:#12488B"><b>~/GitTest</b></span>$ git merge feature_viscous_friction 
+Обновление d1d9ec6..1b87827
+Fast-forward
+ viscous.slx | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 viscous.slx
+<span style="color:#26A269"><b>vitaliy@vitaliy-Nitro-AN515-54</b></span>:<span style="color:#12488B"><b>~/GitTest</b></span>$ git push master dev
+Перечисление объектов: 6, готово.
+Подсчет объектов: 100% (6/6), готово.
+При сжатии изменений используется до 8 потоков
+Сжатие объектов: 100% (4/4), готово.
+Запись объектов: 100% (5/5), 486 байтов | 486.00 КиБ/с, готово.
+Всего 5 (изменений 1), повторно использовано 0 (изменений 0), повторно использовано пакетов 0
+remote: Resolving deltas: 100% (1/1), done.
+remote: 
+remote: Create a pull request for &apos;dev&apos; on GitHub by visiting:
+remote:      https://github.com/IVitaliyI/GitTest/pull/new/dev
+remote: 
+To github.com:IVitaliyI/GitTest.git
+ * [new branch]      dev -&gt; dev
+<span style="color:#26A269"><b>vitaliy@vitaliy-Nitro-AN515-54</b></span>:<span style="color:#12488B"><b>~/GitTest</b></span>$ 
+</pre>
